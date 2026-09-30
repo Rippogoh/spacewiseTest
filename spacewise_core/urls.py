@@ -1,9 +1,10 @@
 from django.contrib import admin
 from django.urls import path
-from gestion import views  # IMPORTANTE: Importamos las vistas de tu app 'gestion'
+from gestion import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # Agregamos la nueva ruta para el catálogo
-    path('catalogo/', views.catalogo, name='catalogo'), 
+    path('catalogo/', views.catalogo, name='catalogo'),
+    # Agregamos la ruta del login (NUEVA)
+    path('login/', views.login_view, name='login'),
 ]

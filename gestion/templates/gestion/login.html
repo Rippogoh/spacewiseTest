@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - SpaceWise</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fuente Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 h-screen flex">
+
+    <!-- Sección Izquierda: Branding (Oculta en móviles) -->
+    <div class="hidden lg:flex lg:w-1/2 bg-blue-900 text-white flex-col justify-center items-center p-12 relative overflow-hidden">
+        <!-- Elementos decorativos de fondo -->
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+            <svg class="absolute w-96 h-96 -top-10 -left-10" fill="currentColor" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50"></circle></svg>
+            <svg class="absolute w-96 h-96 -bottom-20 -right-20" fill="currentColor" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50"></circle></svg>
+        </div>
+
+        <div class="z-10 max-w-md text-center">
+            <!-- Logo Grande -->
+            <div class="bg-amber-400 text-blue-900 p-4 rounded-2xl shadow-lg ring-1 ring-amber-500/30 inline-flex mb-8">
+                <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+            </div>
+            
+            <h1 class="text-4xl font-bold mb-4">Bienvenido a SpaceWise</h1>
+            <p class="text-blue-200 text-lg">
+                La plataforma inteligente para la gestión, cotización y seguimiento de contenedores.
+            </p>
+        </div>
+    </div>
+
+    <!-- Sección Derecha: Formulario de Login -->
+    <div class="w-full lg:w-1/2 flex flex-col justify-center items-center p-8 sm:p-12 lg:p-24 bg-white shadow-xl lg:shadow-none z-10">
+        <div class="w-full max-w-md">
+            
+            <!-- Logo para versión móvil -->
+            <div class="flex items-center justify-center mb-8 lg:hidden">
+                <div class="bg-amber-400 text-blue-900 p-2.5 rounded-xl shadow-sm ring-1 ring-amber-500/30 mr-3 flex items-center justify-center">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                </div>
+                <span class="font-bold text-2xl text-gray-900">SpaceWise</span>
+            </div>
+
+            <div class="mb-10 text-center lg:text-left">
+                <h2 class="text-3xl font-bold text-gray-900">Iniciar Sesión</h2>
+                <p class="mt-2 text-sm text-gray-500">Ingresa tus credenciales para acceder a tu panel.</p>
+            </div>
+
+           <!-- Mensaje de error dinámico -->
+            {% if error %}
+            <div class="mb-4 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+                <span class="block sm:inline">{{ error }}</span>
+            </div>
+            {% endif %}
+
+            <form action="{% url 'login' %}" method="POST" class="space-y-6">
+                {% csrf_token %}
+                
+                <!-- Campo Usuario -->
+                <div>
+                    <label for="username" class="block text-sm font-medium text-gray-700">Nombre de Usuario</label>
+                    <div class="mt-1 relative">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <!-- Icono de usuario -->
+                            <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        </div>
+                        <input id="username" name="username" type="text" required 
+                               class="appearance-none block w-full pl-10 pr-3 py-2.5 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" 
+                               placeholder="Tu usuario">
+                    </div>
+                </div>
+
+                <!-- Campo Contraseña -->
+                <div>
+                    <label for="password" class="block text-sm font-medium text-gray-700">Contraseña</label>
+                    <div class="mt-1 relative">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <!-- Icono de candado -->
+                            <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                        </div>
+                        <input id="password" name="password" type="password" autocomplete="current-password" required 
+                               class="appearance-none block w-full pl-10 pr-3 py-2.5 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" 
+                               placeholder="••••••••">
+                    </div>
+                </div>
+
+                <!-- Botón de Enviar -->
+                <div>
+                    <button type="submit" 
+                            class="w-full flex justify-center py-2.5 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-blue-900 bg-amber-400 hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500 transition-colors">
+                        Ingresar a mi cuenta
+                    </button>
+                </div>
+            </form>
+            
+            <p class="mt-8 text-center text-sm text-gray-500">
+                ¿No tienes una cuenta? 
+                <a href="#" class="font-medium text-blue-600 hover:text-blue-500">Contactar al administrador</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
