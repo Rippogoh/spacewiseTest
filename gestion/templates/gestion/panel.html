@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Tu Empresa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="app-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-icon"><i class="ri-bar-chart-fill"></i></div>
+        <span class="brand-name">Tu Empresa</span>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="index.html" class="nav-link active">
+          <i class="ri-dashboard-3-line"></i>
+          <span>Dashboard</span>
+        </a>
+        <a href="clientes.html" class="nav-link">
+          <i class="ri-team-line"></i>
+          <span>Clients</span>
+        </a>
+        <a href="#" class="nav-link">
+          <i class="ri-file-text-line"></i>
+          <span>Quotations</span>
+        </a>
+        <a href="#" class="nav-link">
+          <i class="ri-shopping-bag-3-line"></i>
+          <span>Sales</span>
+        </a>
+
+        <div class="nav-divider"></div>
+
+        <a href="#" class="nav-link">
+          <i class="ri-group-line"></i>
+          <span>Team</span>
+        </a>
+        <a href="#" class="nav-link">
+          <i class="ri-settings-4-line"></i>
+          <span>Settings</span>
+        </a>
+        <a href="#" class="nav-link">
+          <i class="ri-question-line"></i>
+          <span>Ayuda</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Wrapper -->
+    <div class="main-wrapper">
+
+      <!-- Header / Topbar -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="icon-btn" aria-label="Menu"><i class="ri-menu-line"></i></button>
+          <div class="search-field">
+            <i class="ri-search-line search-icon"></i>
+            <input type="text" placeholder="Buscar clientes...">
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="main-content">
+
+        <!-- Welcome Banner + Metrics -->
+        <section class="card welcome-card">
+          <div class="welcome-header">
+            <div>
+              <h1>¡Bienvenido de nuevo!</h1>
+              <p class="subtitle">Resumen y gestiona la información de tus clientes.</p>
+            </div>
+          </div>
+
+          <div class="metrics-grid">
+            <a href="clientes.html" class="metric-card">
+              <div class="metric-icon bg-purple"><i class="ri-team-line"></i></div>
+              <span class="metric-label">Clientes Totales</span>
+              <span class="metric-value">130</span>
+            </a>
+
+            <div class="metric-card">
+              <div class="metric-icon bg-green"><i class="ri-file-list-3-line"></i></div>
+              <span class="metric-label">Cotizaciones Abiertas</span>
+              <span class="metric-value">24</span>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon bg-amber"><i class="ri-shopping-cart-2-line"></i></div>
+              <span class="metric-label">Compras Registradas</span>
+              <span class="metric-value">19</span>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon bg-rose"><i class="ri-line-chart-line"></i></div>
+              <span class="metric-label">Vendedores Activos</span>
+              <span class="metric-value">7</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Middle Grid -->
+        <div class="two-columns-grid">
+
+          <section class="card">
+            <h2 class="card-title">Resumen de Cotizaciones</h2>
+            <div class="status-list">
+              <div class="status-row">
+                <div class="status-info">
+                  <div class="status-icon bg-purple"><i class="ri-file-text-line"></i></div>
+                  <div class="status-label-group">
+                    <span class="status-label">Aprobadas</span>
+                    <div class="progress-bar-bg">
+                      <div class="progress-bar-fill fill-purple" style="width: 75%;"></div>
+                    </div>
+                  </div>
+                </div>
+                <i class="ri-arrow-right-s-line" style="color: var(--text-muted)"></i>
+              </div>
+
+              <div class="status-row">
+                <div class="status-info">
+                  <div class="status-icon bg-green"><i class="ri-checkbox-circle-line"></i></div>
+                  <div class="status-label-group">
+                    <span class="status-label">Rechazadas</span>
+                    <div class="progress-bar-bg">
+                      <div class="progress-bar-fill fill-green" style="width: 25%;"></div>
+                    </div>
+                  </div>
+                </div>
+                <i class="ri-arrow-right-s-line" style="color: var(--text-muted)"></i>
+              </div>
+
+              <div class="status-row">
+                <div class="status-info">
+                  <div class="status-icon bg-amber"><i class="ri-time-line"></i></div>
+                  <div class="status-label-group">
+                    <span class="status-label">Pendientes</span>
+                    <div class="progress-bar-bg">
+                      <div class="progress-bar-fill fill-amber" style="width: 45%;"></div>
+                    </div>
+                  </div>
+                </div>
+                <i class="ri-arrow-right-s-line" style="color: var(--text-muted)"></i>
+              </div>
+            </div>
+          </section>
+
+          <section class="card">
+            <h2 class="card-title">Cotizaciones Recientes por Cliente</h2>
+            <div class="recent-quotes-list">
+              <div class="quote-item">
+                <div>
+                  <div class="client">Alimentos P&R</div>
+                  <div class="date">22/07</div>
+                </div>
+                <div class="amount">$15.5k</div>
+              </div>
+              <div class="quote-item">
+                <div>
+                  <div class="client">Servicios Globales</div>
+                  <div class="date">21/07</div>
+                </div>
+                <div class="amount">$8.2k</div>
+              </div>
+              <div class="quote-item">
+                <div>
+                  <div class="client">Alimentos Elementes</div>
+                  <div class="date">21/07</div>
+                </div>
+                <div class="amount">$6.8k</div>
+              </div>
+              <div class="quote-item">
+                <div>
+                  <div class="client">Retail Sur</div>
+                  <div class="date">23/07</div>
+                </div>
+                <div class="amount">$3.2k</div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- Table Section -->
+        <section class="card">
+          <div class="section-header">
+            <h2 class="card-title" style="margin-bottom:0;">Últimas Solicitudes</h2>
+            <div class="table-toolbar" style="margin-bottom:0;">
+              <div class="search-field" style="width: 220px;">
+                <i class="ri-search-line search-icon"></i>
+                <input type="text" placeholder="Buscar por nombre o rut...">
+              </div>
+              <button class="btn btn-secondary">
+                <i class="ri-filter-3-line"></i>
+                <span>Filtros</span>
+                <i class="ri-arrow-down-s-line"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Cliente</th>
+                  <th>Tipo</th>
+                  <th>Cantidad</th>
+                  <th>Estado</th>
+                  <th style="text-align: right;">Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <a href="cliente-detalle.html" class="table-client-link">Agencia Alpha</a>
+                  </td>
+                  <td>Venta</td>
+                  <td>25</td>
+                  <td><span class="badge badge-success">Completado</span></td>
+                  <td style="text-align: right;"><button class="icon-btn"><i class="ri-more-2-fill"></i></button></td>
+                </tr>
+                <tr>
+                  <td><strong>Construcciones S.A.</strong></td>
+                  <td>Compra</td>
+                  <td>10</td>
+                  <td><span class="badge badge-warning">Pendiente</span></td>
+                  <td style="text-align: right;"><button class="icon-btn"><i class="ri-more-2-fill"></i></button></td>
+                </tr>
+                <tr>
+                  <td><strong>Mercado Central</strong></td>
+                  <td>Venta</td>
+                  <td>30</td>
+                  <td><span class="badge badge-success">Completado</span></td>
+                  <td style="text-align: right;"><button class="icon-btn"><i class="ri-more-2-fill"></i></button></td>
+                </tr>
+                <tr>
+                  <td><strong>Taller Mecánico</strong></td>
+                  <td>Compra</td>
+                  <td>5</td>
+                  <td><span class="badge badge-danger">Cancelado</span></td>
+                  <td style="text-align: right;"><button class="icon-btn"><i class="ri-more-2-fill"></i></button></td>
+                </tr>
+                <tr>
+                  <td><strong>Retail Sur</strong></td>
+                  <td>Venta</td>
+                  <td>20</td>
+                  <td><span class="badge badge-info">En Proceso</span></td>
+                  <td style="text-align: right;"><button class="icon-btn"><i class="ri-more-2-fill"></i></button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="pagination">
+            <span class="pagination-text">Mostrando 1 a 5 de 25 clientes</span>
+            <div class="pagination-buttons">
+              <button class="page-btn" disabled><i class="ri-arrow-left-s-line"></i></button>
+              <button class="page-btn active">1</button>
+              <button class="page-btn">2</button>
+              <button class="page-btn">3</button>
+              <button class="page-btn"><i class="ri-arrow-right-s-line"></i></button>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

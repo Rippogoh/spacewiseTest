@@ -77,8 +77,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'spacewise',
-        'USER': 'bambou',
-        'PASSWORD': '1234',
+        'USER': 'root',
+        'PASSWORD': 'fornite123',
         'HOST': 'localhost',
         'PORT': '3306',
         'OPTIONS': {

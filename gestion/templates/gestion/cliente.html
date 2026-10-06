@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clientes - Tu Empresa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="app-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-icon"><i class="ri-bar-chart-fill"></i></div>
+        <span class="brand-name">Tu Empresa</span>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="index.html" class="nav-link">
+          <i class="ri-dashboard-3-line"></i>
+          <span>Dashboard</span>
+        </a>
+        <a href="clientes.html" class="nav-link active">
+          <i class="ri-team-line"></i>
+          <span>Clients</span>
+        </a>
+        <a href="#" class="nav-link">
+          <i class="ri-file-text-line"></i>
+          <span>Quotations</span>
+        </a>
+        <a href="#" class="nav-link">
+          <i class="ri-shopping-bag-3-line"></i>
+          <span>Sales</span>
+        </a>
+
+        <div class="nav-divider"></div>
+
+        <a href="#" class="nav-link">
+          <i class="ri-group-line"></i>
+          <span>Team</span>
+        </a>
+        <a href="#" class="nav-link">
+          <i class="ri-settings-4-line"></i>
+          <span>Settings</span>
+        </a>
+        <a href="#" class="nav-link">
+          <i class="ri-question-line"></i>
+          <span>Ayuda</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Wrapper -->
+    <div class="main-wrapper">
+
+      <!-- Header -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="icon-btn" aria-label="Menu"><i class="ri-menu-line"></i></button>
+          <div class="search-field">
+            <i class="ri-search-line search-icon"></i>
+            <input type="text" placeholder="Buscar clientes...">
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="main-content">
+
+        <!-- Page Header -->
+        <div class="section-header">
+          <div>
+            <h1 class="welcome-header" style="margin:0; font-size:24px;">Clientes</h1>
+            <p class="subtitle">Consulta y gestiona la información de tus clientes.</p>
+          </div>
+          <button class="btn btn-primary">
+            <i class="ri-add-line"></i>
+            <span>Nuevo cliente</span>
+          </button>
+        </div>
+
+        <!-- Card con Tabla de Clientes -->
+        <section class="card">
+          <div class="table-toolbar">
+            <div class="search-field" style="width: 320px;">
+              <i class="ri-search-line search-icon"></i>
+              <input type="text" placeholder="Buscar por nombre o rut...">
+            </div>
+            <button class="btn btn-secondary">
+              <i class="ri-filter-3-line"></i>
+              <span>Filtros</span>
+              <i class="ri-arrow-down-s-line"></i>
+            </button>
+          </div>
+
+          <div class="table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Rut</th>
+                  <th>Nombre</th>
+                  <th>Teléfono</th>
+                  <th>Estado</th>
+                  <th style="text-align: right;">Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>76.432.110-K</td>
+                  <td><strong>Agencia Alpha S.A.</strong></td>
+                  <td>+56 9 8765 4321</td>
+                  <td><span class="badge badge-success">Activo</span></td>
+                  <td style="text-align: right;"><button class="icon-btn"><i class="ri-more-2-fill"></i></button></td>
+                </tr>
+                <tr>
+                  <td>12.890.345-6</td>
+                  <td><strong>Construcciones S.A.</strong></td>
+                  <td>+56 9 1234 5678</td>
+                  <td><span class="badge badge-success">Activo</span></td>
+                  <td style="text-align: right;"><button class="icon-btn"><i class="ri-more-2-fill"></i></button></td>
+                </tr>
+                <tr>
+                  <td>96.112.450-1</td>
+                  <td><strong>Mercado Central Ltda.</strong></td>
+                  <td>+56 9 4567 8901</td>
+                  <td><span class="badge badge-danger">Inactivo</span></td>
+                  <td style="text-align: right;"><button class="icon-btn"><i class="ri-more-2-fill"></i></button></td>
+                </tr>
+                <tr>
+                  <td>77.890.123-4</td>
+                  <td><strong>Taller Mecánico Hermanos</strong></td>
+                  <td>+56 9 9876 5432</td>
+                  <td><span class="badge badge-success">Activo</span></td>
+                  <td style="text-align: right;"><button class="icon-btn"><i class="ri-more-2-fill"></i></button></td>
+                </tr>
+                <tr>
+                  <td>65.432.109-8</td>
+                  <td><strong>Retail Sur SpA</strong></td>
+                  <td>+56 9 3344 5566</td>
+                  <td><span class="badge badge-warning">Pendiente</span></td>
+                  <td style="text-align: right;"><button class="icon-btn"><i class="ri-more-2-fill"></i></button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="pagination">
+            <span class="pagination-text">Mostrando 1 a 5 de 25 clientes</span>
+            <div class="pagination-buttons">
+              <button class="page-btn" disabled><i class="ri-arrow-left-s-line"></i></button>
+              <button class="page-btn active">1</button>
+              <button class="page-btn">2</button>
+              <button class="page-btn">3</button>
+              <button class="page-btn"><i class="ri-arrow-right-s-line"></i></button>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <footer class="app-footer">
+        © 2024 Tu Empresa. Todos los derechos reservados.
+      </footer>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

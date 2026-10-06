@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agencia Alpha - Detalle de Cliente</title>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Remix Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- Hoja de Estilos -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="app-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-icon"><i class="ri-bar-chart-fill"></i></div>
+        <span class="brand-name">Tu Empresa</span>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="index.html" class="nav-link">
+          <i class="ri-dashboard-3-line"></i>
+          <span>Dashboard</span>
+        </a>
+        <a href="clientes.html" class="nav-link active">
+          <i class="ri-team-line"></i>
+          <span>Clientes</span>
+        </a>
+        <a href="#" class="nav-link">
+          <i class="ri-file-text-line"></i>
+          <span>Cotizaciones</span>
+        </a>
+        <a href="#" class="nav-link">
+          <i class="ri-shopping-bag-3-line"></i>
+          <span>Compras</span>
+        </a>
+        <a href="#" class="nav-link">
+          <i class="ri-line-chart-line"></i>
+          <span>Vendedores</span>
+        </a>
+
+        <div class="nav-divider"></div>
+
+        <a href="#" class="nav-link">
+          <i class="ri-pie-chart-line"></i>
+          <span>Reportes</span>
+        </a>
+        <a href="#" class="nav-link">
+          <i class="ri-settings-4-line"></i>
+          <span>Configuración</span>
+        </a>
+        <a href="#" class="nav-link">
+          <i class="ri-question-line"></i>
+          <span>Ayuda</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Wrapper -->
+    <div class="main-wrapper">
+
+      <!-- Topbar / Header -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="icon-btn" aria-label="Menu"><i class="ri-menu-line"></i></button>
+          <div class="search-field">
+            <i class="ri-search-line search-icon"></i>
+            <input type="text" placeholder="Buscar en clientes...">
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="main-content">
+
+        <!-- Breadcrumb / Navegación migas de pan -->
+        <nav class="breadcrumb">
+          <a href="clientes.html">Clientes</a>
+          <i class="ri-arrow-right-s-line"></i>
+          <span>Detalle de cliente</span>
+        </nav>
+
+        <!-- Header del Cliente -->
+        <div class="client-header-container">
+          <div class="client-title-group">
+            <div class="client-avatar-icon">
+              <i class="ri-user-3-line"></i>
+            </div>
+            <div>
+              <h1 class="client-name">Agencia Alpha</h1>
+              <p class="subtitle">Vista general de la información del cliente</p>
+            </div>
+          </div>
+          <div class="client-actions">
+            <button class="btn btn-secondary">
+              <i class="ri-pencil-line"></i>
+              <span>Editar</span>
+            </button>
+            <button class="btn btn-primary">
+              <i class="ri-add-line"></i>
+              <span>Nuevo cliente</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Tarjeta de Información General -->
+        <section class="card detail-info-card">
+          <div class="info-row">
+            <div class="info-label">
+              <div class="info-icon bg-purple"><i class="ri-user-3-line"></i></div>
+              <span>Cliente:</span>
+            </div>
+            <div class="info-value">Agencia Alpha</div>
+          </div>
+
+          <div class="info-row">
+            <div class="info-label">
+              <div class="info-icon bg-purple"><i class="ri-information-line"></i></div>
+              <span>Información General:</span>
+            </div>
+            <div class="info-value text-muted">—</div>
+          </div>
+
+          <div class="info-row">
+            <div class="info-label">
+              <div class="info-icon bg-purple"><i class="ri-file-text-line"></i></div>
+              <span>Historial de cotizaciones:</span>
+            </div>
+            <div class="info-value">1</div>
+          </div>
+
+          <div class="info-row">
+            <div class="info-label">
+              <div class="info-icon bg-purple"><i class="ri-shopping-cart-2-line"></i></div>
+              <span>Compras registradas:</span>
+            </div>
+            <div class="info-value text-muted">—</div>
+          </div>
+
+          <div class="info-row">
+            <div class="info-label">
+              <div class="info-icon bg-purple"><i class="ri-history-line"></i></div>
+              <span>Devoluciones:</span>
+            </div>
+            <div class="info-value text-muted">—</div>
+          </div>
+        </section>
+
+        <!-- Tarjeta de Actividad Reciente -->
+        <section class="card">
+          <h2 class="card-title" style="margin-bottom: 16px;">Actividad reciente</h2>
+          <div class="empty-activity-box">
+            <div class="empty-icon">
+              <i class="ri-clipboard-line"></i>
+            </div>
+            <div class="empty-text">
+              <p class="empty-title">Aún no hay actividad registrada para este cliente.</p>
+              <p class="empty-subtitle">Las cotizaciones, compras y devoluciones aparecerán aquí.</p>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <footer class="app-footer">
+        © 2024 Tu Empresa. Todos los derechos reservados.
+      </footer>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
