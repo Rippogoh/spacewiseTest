@@ -29,3 +29,15 @@ def login_view(request):
             error_message = 'Usuario o contraseña incorrectos.'
 
     return render(request, 'gestion/login.html', {'error': error_message})
+
+# 3. Vista de Clientes
+def cliente(request):
+    return render(request, 'gestion/cliente.html')
+
+# 4. Vista de Detalle de Cliente
+def cliente_detalle(request):
+    return render(request, 'gestion/clientedetalle.html')
+
+# 5. Vista del Panel
+def panel(request):
+    return render(request, 'gestion/panel.html')
